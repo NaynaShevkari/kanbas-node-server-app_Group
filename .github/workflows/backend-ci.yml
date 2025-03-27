@@ -27,3 +27,7 @@ jobs:
 
       - name: Lint
         run: npm run lint --if-present
+        
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+
